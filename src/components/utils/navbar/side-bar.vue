@@ -104,9 +104,9 @@
               </transition>                            
             </div>
             <ul>
-              <router-link to="/backup-manager">用户管理</router-link>
-              <router-link to="/recovery-manager">用户组管理</router-link>
-              <router-link to="/recovery-manager">权限管理</router-link>
+              <router-link to="/user-manager">用户管理</router-link>
+              <router-link to="/group-manager">用户组管理</router-link>
+              <router-link to="/permission-manager">权限管理</router-link>
             </ul>
           </li>          
         </ul>
@@ -174,8 +174,6 @@
     background: #141E30;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
     color: #aaabae;
     box-shadow: 2px 0 5px grey;
     z-index: 999;
