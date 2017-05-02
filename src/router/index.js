@@ -7,6 +7,7 @@ import StrategyManagerRoute from '../components/strategy-manager/route'
 import NodeManagerRoute from '../components/node-manager/route'
 import BackupRecoveryRoute from '../components/backup-recovery/route'
 import ReportRoute from '../components/report-manager/route'
+import AdminPanelRoute from '../components/admin-panel/route'
 import LogRoute from '../components/log-manager/route'
 
 Vue.use(Router)
@@ -20,6 +21,7 @@ export default new Router({
     ...NodeManagerRoute,
     ...BackupRecoveryRoute,
     ...ReportRoute,
-    ...LogRoute
+    ...LogRoute,
+    ...AdminPanelRoute
   ]
 })
