@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Dashboard</h1>   
+    <h1 style="margin: 20px 0;">Dashboard</h1>   
     <el-row :gutter="20">
       <el-col :span="6">
         <div class="node-box">
