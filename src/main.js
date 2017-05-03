@@ -5,15 +5,21 @@ import App from './App'
 import router from './router'
 
 import './assets/css/styles.css'
-import 'element-ui/lib/theme-default/index.css'
+import './assets/css/vuetify-material.css'
+// import 'element-ui/lib/theme-default/index.css'
+import 'vuetify/dist/vuetify.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.min.css'
 
-import ElementUI from 'element-ui'
+// import ElementUI from 'element-ui'
+import Vuetify from 'vuetify'
+ 
+
 
 Vue.config.productionTip = false
 
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
+Vue.use(Vuetify);
 
 
 /* eslint-disable no-new */

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 style="margin: 20px 0;">Dashboard</h1>   
-    <el-row :gutter="20">
+    <!--<el-row :gutter="20">
       <el-col :span="6">
         <div class="node-box">
           <h4>节点1</h4>
@@ -74,7 +74,7 @@
           </el-table>
         </div>
       </el-col>
-    </el-row>
+    </el-row>-->
   </div>
 </template>
 

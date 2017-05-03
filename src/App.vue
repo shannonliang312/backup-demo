@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
-    <!--<top-bar></top-bar>-->
-    <transition 
+  <!--<div id="app">-->
+    <!--<transition 
         appear
         name="custom-classes-transition"
         enter-active-class="animated fadeIn"      
@@ -23,10 +22,41 @@
       >
       <router-view></router-view>
     </transition>
-      <!--<router-view></router-view>-->      
-    </div>
+  
+    </div>-->
+    <v-app left-fixed-sidebar>
+      <v-toolbar>
+        <v-toolbar-side-icon @click.native.stop="nav3 = !nav3" />
+        <v-toolbar-title>Inspur</v-toolbar-title>
+      </v-toolbar class="secondary">
+      <main>
+        <v-sidebar left fixed drawer v-model="nav3" height="100%">
+          <v-list>
+            <v-list-item v-for="i in 3" :key="i">
+              <v-list-tile>
+                <v-list-tile-title>Item {{ i }}</v-list-tile-title>
+              </v-list-tile>
+            </v-list-item>
+          </v-list>
+        </v-sidebar>
+        <v-content>
+          <v-container fluid>
+            <div :style="containerClass">
+              <transition 
+                appear
+                name="custom-classes-transition"
+                enter-active-class="animated fadeIn"      
+              >
+                <router-view></router-view>
+              </transition>
+            </div>
+          </v-container>
+        </v-content>
+      </main>
+      <!--<v-footer>Footer</v-footer>-->
+    </v-app>
     
-  </div>
+  <!--</div>-->
 </template>
 
 <script>
@@ -38,7 +68,8 @@ export default {
   name: 'app',
   data() {
     return {
-      collapseState: false
+      collapseState: false,
+      nav3: false
     }
   },
   computed: {
@@ -46,12 +77,11 @@ export default {
       return {
         "height": "100%",
         "padding-top": "70px",
-        "padding-right": "1%",
-        "padding-left": this.collapseState?"6%": "260px",
+        "padding-right": "50px",
+        "padding-left": "50px",
         "padding-bottom": "30px",
         "transition": "padding-left 100ms" ,
         "transition-delay": "100ms",
-        // "background": "#f5f5f5"
       }
     }
   },
@@ -70,15 +100,11 @@ export default {
 </script>
 
 <style>
-#app {
+/*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
+}*/
 
-  .router-container {
-    padding-top: 70px;
-    padding-left: 16%;
-  }
 </style>
