@@ -8,7 +8,7 @@ export default Bar.extend({
         datasets: [
           {
             label: 'Data One',
-            backgroundColor: '#f87979',
+            backgroundColor: '#2b3942',
             data: [40, 20, 100, 60, 55]
           }
         ]

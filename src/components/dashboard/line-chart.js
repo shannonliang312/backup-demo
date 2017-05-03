@@ -7,7 +7,7 @@ export default Line.extend({
         labels: ['1', '2', '3', '4', '5'],
         datasets: [
           {
-            backgroundColor: '#f87979',
+            backgroundColor: '#2b3942',
             data: [40, 20, 30, 28, 11]
           }
         ]

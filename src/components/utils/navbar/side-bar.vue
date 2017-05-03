@@ -170,12 +170,13 @@
     height: 100%;
     top: 60px;
     left: 0px;
-    /*background-color: #202121;*/
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #aaabae;
-    box-shadow: 2px 0 5px grey;
+    background-color: #22313a;
+    /*background: #141E30;  
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  
+    background: linear-gradient(to right, #243B55, #141E30); */
+    color: #8a9ba1;
+    /*box-shadow: 2px 0 5px grey;*/
+    border-right: 1px solid #242625;
     z-index: 999;
   }
 

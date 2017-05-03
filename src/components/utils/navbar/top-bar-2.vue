@@ -45,16 +45,17 @@
 <style scoped>
   .topbar-box {
     height: 60px;
-    /*background-color: #eef1f6;*/
-    background: #24C6DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #22313a;
+    /*background: #24C6DC;  
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  
+    background: linear-gradient(to right, #514A9D, #24C6DC); */
 
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 9990;
     top:0;
-    box-shadow: 0 1px 15px grey;
+    /*box-shadow: 0 1px 15px grey;*/
+    border-bottom:  1px solid #242625;
   }
 
   .inspur {

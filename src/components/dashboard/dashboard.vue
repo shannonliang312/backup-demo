@@ -47,7 +47,7 @@
       <el-col :span="12">
         <div class="table-box">
           <h2 style="margin-bottom: 20px;">存储信息</h2>
-          <el-table border style="width: 100%">
+          <el-table  style="width: 100%; background: transparent;">
             <el-table-column prop="IP" label="IP地址">
             </el-table-column>
             <el-table-column prop="name" label="名称">
@@ -62,7 +62,7 @@
       <el-col :span="12">
         <div class="table-box">
           <h2 style="margin-bottom: 20px;">日志信息</h2>
-          <el-table border style="width: 100%;" :data="logData">
+          <el-table style="width: 100%; background: transparent;" :data="logData">
             <el-table-column prop="time" label="时间">
             </el-table-column>
             <el-table-column prop="action" label="操作" width="80">
@@ -105,10 +105,10 @@
 <style>
   .node-box {
     padding: 10px;
-    background: #fff;
+    background: #22313a;
     height: 60px;
     border-radius: 4px;
-    box-shadow: 0 1px 5px grey;
+    /*box-shadow: 0 1px 5px grey;*/
   }
   
   code {
@@ -123,16 +123,16 @@
   .chart-box {
     margin-top: 30px;
     padding: 10px;
-    background: #fff;
+    background: #22313a;
     border-radius: 4px;
-    box-shadow: 0 1px 5px grey;
+    /*box-shadow: 0 1px 5px grey;*/
   }
 
   .table-box {
     margin-top: 30px;
     padding: 10px;
-    background: #fff;
+    background: #22313a;
     border-radius: 4px;
-    box-shadow: 0 1px 5px grey;
+    /*box-shadow: 0 1px 5px grey;*/
   }
 </style>
