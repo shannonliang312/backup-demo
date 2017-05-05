@@ -39,7 +39,7 @@
 </template>
 
 <script>
-  // import { mapActions, mapMutations, mapGetters } from 'vuex'
+  import { mapActions, mapMutations, mapGetters } from 'vuex'
   //import { execLogin } from '../../service/login/loginService'
   import './login.css'
   // import axios from 'axios'
@@ -66,10 +66,11 @@
 
     },
     methods: {
-      // ...mapActions(['actLogin']),
+      ...mapActions(['actLogin']),
       // ...mapMutations(['setRole']),
       onSubmit(formName) { 
-        //  this.actLogin();
+         this.actLogin();
+         this.$router.push({ path: "/" });
         //  if(this.formData.usr == "admin") {
         //    this.setRole({role: "admin"});
         //  } else {

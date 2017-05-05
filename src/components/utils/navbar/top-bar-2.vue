@@ -19,13 +19,15 @@
       </div>
       <ul class="dropdown-menu">
         <li><router-link to="/admin-panel"><i class="fa fa-info-circle" aria-hidden="true"></i>账户信息</router-link></li>
-        <li><i class="fa fa-sign-out" aria-hidden="true"></i>退出</li>
+        <li @click="logOut"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+  import { mapActions, mapMutations, mapGetters } from 'vuex'
+
   export default {
     name: "top-bar-2",
     data() {
@@ -34,9 +36,14 @@
       }
     },
     methods: {
+      ...mapMutations(['logoutSuccess']),
       toggleMenu() {
         this.isCollapsed = !this.isCollapsed;
         this.$emit("toggle", {toggleState: this.isCollapsed});
+      },
+      logOut() {
+        this.logoutSuccess();
+        this.$router.replace({ path: "/login" });
       }
     }
   }

@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <!--<transition 
+  <div id="app-main">
+    <!--<top-bar></top-bar>-->
+    <transition 
         appear
         name="custom-classes-transition"
         enter-active-class="animated fadeIn"      
@@ -22,8 +23,9 @@
       >
       <router-view></router-view>
     </transition>
-    </div>-->
-    <router-view></router-view>
+      <!--<router-view></router-view>-->      
+    </div>
+    
   </div>
 </template>
 
@@ -33,7 +35,7 @@
   import SideBar from '@/components/utils/navbar/side-bar.vue'
 
 export default {
-  name: 'app',
+  name: 'layout',
   data() {
     return {
       collapseState: false

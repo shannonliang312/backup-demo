@@ -16,7 +16,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/', redirect: '/dashboard' },
+    // { path: '/', redirect: '/dashboard' },
     ...DashboardRoute,
     ...StorageManagerRoute,
     ...StrategyManagerRoute,
