@@ -7,6 +7,7 @@
       <el-button type="primary" style="margin-bottom: 30px;" @click="showDialog">
         <i class="fa fa-plus" aria-hidden="true"></i>添加新策略
       </el-button>
+      <el-input type="text" style="width: 20%;float: right" placeholder="搜索"></el-input>
       <el-table :data="tableData" border style="width: 100%;">
         <el-table-column prop="state" label="状态"></el-table-column>
         <el-table-column prop="name" label="名称"></el-table-column>

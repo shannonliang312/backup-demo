@@ -4,6 +4,7 @@
       系统恢复管理
     </div>
     <div class="router-box-body">
+      <el-input type="text" style="width: 20%;float: right; margin-bottom: 20px;" placeholder="搜索"></el-input>
       <el-table :data="tableData" border style="width: 100%;">
         <el-table-column prop="time" label="创建时间"></el-table-column>
         <el-table-column prop="task" label="任务名称"></el-table-column>
