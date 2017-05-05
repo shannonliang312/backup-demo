@@ -39,10 +39,10 @@
 </template>
 
 <script>
-  import { mapActions, mapMutations, mapGetters } from 'vuex'
-  import { execLogin } from '../../service/login/loginService'
+  // import { mapActions, mapMutations, mapGetters } from 'vuex'
+  //import { execLogin } from '../../service/login/loginService'
   import './login.css'
-  import axios from 'axios'
+  // import axios from 'axios'
  
   export default {
     name: "login",
@@ -60,27 +60,27 @@
       }
     },
     computed: {
-      ...mapGetters(['getLoginState'])
+      // ...mapGetters(['getLoginState'])
     },
     created() {
 
     },
     methods: {
-      ...mapActions(['actLogin']),
-      ...mapMutations(['setRole']),
+      // ...mapActions(['actLogin']),
+      // ...mapMutations(['setRole']),
       onSubmit(formName) { 
-         this.actLogin();
-         if(this.formData.usr == "admin") {
-           this.setRole({role: "admin"});
-         } else {
-           this.setRole({role: "normal"});
-         }
+        //  this.actLogin();
+        //  if(this.formData.usr == "admin") {
+        //    this.setRole({role: "admin"});
+        //  } else {
+        //    this.setRole({role: "normal"});
+        //  }
          
-         this.$router.replace({ path: "/home" });
-        // execLogin({usr: this.formData.usr, psw: this.formData.password}).then(function(res){
-        //   console.log(res);
-        // })
-        // console.log(execLogin);
+        //  this.$router.replace({ path: "/home" });
+        // // execLogin({usr: this.formData.usr, psw: this.formData.password}).then(function(res){
+        // //   console.log(res);
+        // // })
+        // // console.log(execLogin);
       },      
     }
   }

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import LoginRoute from '../components/login/route'
 import DashboardRoute from '../components/dashboard/route'
 import StorageManagerRoute from '../components/storage-manager/route'
 import StrategyManagerRoute from '../components/strategy-manager/route'
@@ -24,6 +25,7 @@ export default new Router({
     ...ReportRoute,
     ...LogRoute,
     ...AdminPanelRoute,
-    ...UserManagerRoute
+    ...UserManagerRoute,
+    ...LoginRoute
   ]
 })

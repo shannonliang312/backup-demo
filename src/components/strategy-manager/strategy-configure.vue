@@ -10,10 +10,10 @@
       <el-table :data="tableData" border style="width: 100%;">
         <el-table-column prop="state" label="状态"></el-table-column>
         <el-table-column prop="name" label="名称"></el-table-column>
+        <el-table-column prop="media" label="备份介质"></el-table-column>        
         <el-table-column prop="serverIP" label="工作机IP地址"></el-table-column>
         <el-table-column prop="target" label="复制目录和文件"></el-table-column>
         <el-table-column prop="DR" label="灾备机"></el-table-column>
-        <el-table-column prop="bandwidth" label="当前带宽"></el-table-column>
         <el-table-column prop="acion" label="操作"></el-table-column>
       </el-table>
     </div>
@@ -21,6 +21,9 @@
       <el-form ref="newPolicyForm" :model="newPolicyForm" label-width="120px" style="width: 80%">
         <el-form-item label="名称:">
           <el-input v-model="newPolicyForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="备份介质:">
+          <el-input v-model="newPolicyForm.media"></el-input>
         </el-form-item>
         <el-form-item label="工作机IP地址:">
           <el-input v-model="newPolicyForm.serverIP"></el-input>
@@ -30,9 +33,6 @@
         </el-form-item>
         <el-form-item label="灾备机:">
           <el-input v-model="newPolicyForm.DR"></el-input>
-        </el-form-item>
-        <el-form-item label="当前带宽:">
-          <el-input v-model="newPolicyForm.bandwidth"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary">提交</el-button>

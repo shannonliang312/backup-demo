@@ -32,14 +32,22 @@
       </el-col>
     </el-row>
     <el-row :gutter="30">
-      <el-col :span="12">
+      <el-col :span="8">
         <div class="chart-box">
-          <line-chart :height="200"></line-chart>
+          <h3>备份成功</h3>
+          <pie-chart :height="250"></pie-chart>
         </div>        
       </el-col>
-      <el-col :span="12">
+      <el-col :span="8">
         <div class="chart-box">
-          <bar-chart :height="200"></bar-chart>
+          <h3>备份失败</h3>
+          <pie-chart :height="250"></pie-chart>
+        </div>        
+      </el-col>
+      <el-col :span="8">
+        <div class="chart-box">
+          <h3>正在进行</h3>
+          <pie-chart :height="250"></pie-chart>
         </div>        
       </el-col>
     </el-row>    
@@ -82,6 +90,7 @@
 
   import LineChart from './line-chart'
   import BarChart from './bar-chart'
+  import PieChart from './pie-chart'
 
   export default {
     name: "dashboard",
@@ -97,7 +106,8 @@
     },
     components: {
       LineChart,
-      BarChart
+      BarChart,
+      PieChart
     }
   }
 </script>
