@@ -9,7 +9,7 @@
       <div class="menu">
         <ul id="menu">
           <li>
-            <router-link to="/dashboard">
+            <router-link to="/">
               <i class="fa fa-tachometer"></i>
               <transition name="fade">
                 <div v-if="!isCollapsed">
