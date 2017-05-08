@@ -38,7 +38,7 @@ export default {
   name: 'layout',
   data() {
     return {
-      collapseState: false
+      collapseState: true
     }
   },
   computed: {
