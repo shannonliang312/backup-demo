@@ -32,7 +32,7 @@
     name: "top-bar-2",
     data() {
       return {
-        isCollapsed: false
+        isCollapsed: true
       }
     },
     methods: {
