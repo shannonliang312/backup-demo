@@ -9,13 +9,55 @@
       </el-button>
       <el-input type="text" style="width: 20%;float: right" placeholder="搜索"></el-input>
       <el-table :data="tableData" border style="width: 100%;">
+        <el-table-column type="expand">
+          <template scope="props">
+            <el-form label-position="left" inline class="demo-table-expand">
+              <el-form-item label="节点ID：">
+                <span>{{ props.row.id }}</span>
+              </el-form-item>
+              <el-form-item label="节点状态：">
+                <el-tag :type="props.row.stateTag"><i :class="props.row.stateIcon" aria-hidden="true"></i>{{ props.row.state }}</el-tag>                
+              </el-form-item>
+              <el-form-item label="节点IP：">
+                <span>{{ props.row.ip }}</span>
+              </el-form-item>
+              <el-form-item label="系统信息：">
+                <span>{{ props.row.os }}</span>
+              </el-form-item>
+              <el-form-item label="数据库信息：">
+                <span>{{ props.row.DBinfo }}</span>
+              </el-form-item>
+              <el-form-item label="备份策略：">
+                <el-tag style="margin-right: 5px;" type="gray" v-for=" strategy in props.row.strategies">
+                  <i class="fa fa-file-text" aria-hidden="true"></i>{{ strategy }}
+                </el-tag>
+              </el-form-item>
+              <el-form-item label="上次备份时间：">
+                <span>{{ props.row.lastBackupTime }}</span>
+              </el-form-item>
+              <el-form-item label="上次还原时间：">
+                <span>{{ props.row.lastRecoveryTime }}</span>
+              </el-form-item>
+            </el-form>
+          </template>
+        </el-table-column>
+        <el-table-column prop="id" label="ID"></el-table-column>
         <el-table-column prop="state" label="状态"></el-table-column>
-        <el-table-column prop="name" label="名称"></el-table-column>
         <el-table-column prop="ip" label="IP地址"></el-table-column>
-        <el-table-column prop="systemInfo" label="系统信息"></el-table-column>
-        <el-table-column prop="diskInfo" label="磁盘信息"></el-table-column>
-        <el-table-column prop="action" label="操作"></el-table-column>
+        <el-table-column prop="lastBackupTime" label="上次备份时间"></el-table-column>
+        <el-table-column prop="action" label="操作" width="180">
+          <template scope="scope">
+            <el-button size="small">编辑</el-button>
+            <el-button size="small" type="danger">删除</el-button>              
+          </template>
+        </el-table-column>
       </el-table>
+      <el-pagination 
+        small layout="prev, pager, next"
+        :total="50"
+        style="text-align: right; margin-top: 10px;"
+      >
+      </el-pagination>
     </div>
     <el-dialog title="新增节点" v-model="dialogVisible" size="small"> 
       <el-form ref="newNodeForm" :model="newNodeForm" label-width="120px" style="width: 80%">
@@ -45,9 +87,75 @@
     name: "node-manager",
     data () {
       return {
-        tableData: [],
+        tableData: [{
+          id: "11234",
+          state: "已备份",
+          stateTag: "success",
+          stateIcon: "fa fa-check",
+          ip: "10.33.125.87",
+          os: "CentOS 7.1",
+          DBinfo: "Postgres 9",
+          strategies: ["策略一", "策略二"],
+          lastBackupTime: "2017-05-09 10:44:23",
+          lastRecoveryTime: "2017-05-09 16:44:23"
+        },{
+          id: "44564",
+          state: "未备份",
+          stateTag: "danger",
+          stateIcon: "fa fa-close",
+          ip: "104.33.125.87",
+          os: "CentOS 7.1",
+          DBinfo: "Postgres 9",
+          strategies: ["策略一", "策略三"],
+          lastBackupTime: "",
+          lastRecoveryTime: "2017-05-09 16:44:23"
+        },{
+          id: "34619",
+          state: "已备份",
+          stateTag: "success",
+          stateIcon: "fa fa-check",
+          ip: "10.33.125.87",
+          os: "CentOS 7.1",
+          DBinfo: "Postgres 9",
+          strategies: ["策略一", "策略二"],
+          lastBackupTime: "2017-05-09 10:44:23",
+          lastRecoveryTime: "2017-05-09 16:44:23"
+        },{
+          id: "11234",
+          state: "已备份",
+          stateTag: "success",
+          stateIcon: "fa fa-check",
+          ip: "10.33.125.87",
+          os: "CentOS 7.1",
+          DBinfo: "Postgres 9",
+          strategies: ["策略一", "策略二"],
+          lastBackupTime: "2017-05-09 10:44:23",
+          lastRecoveryTime: "2017-05-09 16:44:23"
+        },{
+          id: "11234",
+          state: "已备份",
+          stateTag: "success",
+          stateIcon: "fa fa-check",
+          ip: "10.33.125.87",
+          os: "CentOS 7.1",
+          DBinfo: "Postgres 9",
+          strategies: ["策略一", "策略二"],
+          lastBackupTime: "2017-05-09 10:44:23",
+          lastRecoveryTime: "2017-05-09 16:44:23"
+        }],
         dialogVisible: false,
         newNodeForm: {}
+      }
+    },
+    computed: {
+      stateTag: function(state) {
+        if(state == "已备份") {
+          return "success";
+        } else if (state == "未备份") {
+          return "danger";
+        } else {
+          return "warning";
+        }
       }
     },
     methods: {
@@ -64,5 +172,18 @@
 <style scoped>
   i {
     margin-right: 5px;
+  }
+
+  .demo-table-expand {
+    font-size: 0;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
   }
 </style>
