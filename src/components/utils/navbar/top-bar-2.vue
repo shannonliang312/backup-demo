@@ -18,7 +18,7 @@
         <span style="margin-left: 3px;">管理员</span>
       </div>
       <ul class="dropdown-menu">
-        <li><router-link to="/admin-panel"><i class="fa fa-info-circle" aria-hidden="true"></i>账户信息</router-link></li>
+        <li><router-link to="/admin-panel"><i class="fa fa-info-circle" aria-hidden="true"></i>修改密码</router-link></li>
         <li @click="logOut"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</li>
       </ul>
     </div>

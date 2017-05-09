@@ -46,8 +46,8 @@ export default {
       return {
         "height": "100%",
         "padding-top": "70px",
-        "padding-right": "1%",
-        "padding-left": this.collapseState?"6%": "260px",
+        "padding-right": "2%",
+        "padding-left": this.collapseState?"7%": "270px",
         "padding-bottom": "30px",
         "transition": "padding-left 100ms" ,
         "transition-delay": "100ms",

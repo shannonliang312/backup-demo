@@ -11,6 +11,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.min.css'
 
 import ElementUI from 'element-ui'
+import NProgress from 'nprogress';
 
 Vue.config.productionTip = false
 
@@ -20,14 +21,19 @@ router.beforeEach((to, from, next) => {
   if(to.fullPath === "/login") {
     next();
   } else {
+    NProgress.start();
     if(!store.getters.getLoginState) {
       next({ path: "/login" });
     } else {
+      // setTimeout(() => {next();}, 1000);
       next();
     }
-  }
-  
+  }  
 })
+
+router.afterEach(() => {
+  NProgress.done();
+});
 
 /* eslint-disable no-new */
 new Vue({

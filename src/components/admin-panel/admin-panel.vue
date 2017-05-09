@@ -1,27 +1,9 @@
 <template>
   <div class="router-box">
     <div class="router-box-header">
-      管理员信息
+      密码管理
     </div>
-    <div class="router-box-body">
-      <el-form ref="adminForm" :model="adminForm" label-width="100px" style="width: 60%">
-        <el-form-item label="用户名：">
-          <el-input v-model="adminForm.user"></el-input>
-        </el-form-item>
-        <el-form-item label="邮箱：">
-          <el-input v-model="adminForm.email"></el-input>
-        </el-form-item>
-        <el-form-item label="所属用户组：">
-          <el-input v-model="adminForm.group"></el-input>
-        </el-form-item>
-        <el-form-item label="角色：">
-          <el-input v-model="adminForm.role"></el-input>
-        </el-form-item>
-        <el-form-item label="权限：">
-          <el-input v-model="adminForm.permission"></el-input>
-        </el-form-item>
-      </el-form>
-      <hr style="width: 60%" />
+    <div class="router-box-body">      
       <h2 style="margin: 20px 0;">密码修改</h2>
       <el-form ref="pswForm" :model="pswForm" label-width="100px" style="width: 60%">
         <el-form-item label="原密码：">

@@ -19,34 +19,34 @@
             </router-link>
           </li>
           <li>
-            <div>
+            <router-link to="/storage-configure">
               <i class="fa fa-window-restore"></i>
               <transition name="fade">
                 <div v-if="!isCollapsed">
                   <span style="position: relative;">存储管理</span>
-                  <span style="float: right; position: relative;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                  <!--<span style="float: right; position: relative;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>-->
                 </div> 
               </transition>                           
-            </div>
-            <ul>              
+            </router-link>
+            <!--<ul>              
               <router-link to="/storage-configure">网络存储设置</router-link>
               <router-link to="/storage-modification">网络存储修改</router-link>
-            </ul>
+            </ul>-->
           </li>
           <li>
-            <div>
+            <router-link to="/strategy-configure">
               <i class="fa fa-cogs"></i>
               <transition name="fade">
                 <div v-if="!isCollapsed">
                   <span style="position: relative;">策略管理</span>
-                  <span style="float: right; position: relative;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                  <!--<span style="float: right; position: relative;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>-->
                 </div>
               </transition>                            
-            </div>
-            <ul>
+            </router-link>
+            <!--<ul>
               <router-link to="/strategy-configure">制定定期备份策略</router-link>
               <router-link to="/strategy-modification">修改定期备份策略</router-link>
-            </ul>
+            </ul>-->
           </li>
           <li>
             <router-link to="/node-manager">
@@ -105,8 +105,8 @@
             </div>
             <ul>
               <router-link to="/user-manager">用户管理</router-link>
-              <router-link to="/group-manager">用户组管理</router-link>
-              <router-link to="/permission-manager">权限管理</router-link>
+              <router-link to="/group-manager">角色管理</router-link>
+              <!--<router-link to="/permission-manager">权限管理</router-link>-->
             </ul>
           </li>          
         </ul>

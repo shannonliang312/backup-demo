@@ -7,16 +7,31 @@
       <el-button type="primary" style="margin-bottom: 30px;" @click="showDialog">
         <i class="fa fa-plus" aria-hidden="true"></i>添加新策略
       </el-button>
+      <el-button type="primary" style="margin-bottom: 30px;">
+        <i class="fa fa-cloud-upload" aria-hidden="true"></i>导入策略
+      </el-button>
+      <el-button type="primary" style="margin-bottom: 30px;">
+        <i class="fa fa-download" aria-hidden="true"></i>导出策略
+      </el-button>
       <el-input type="text" style="width: 20%;float: right" placeholder="搜索"></el-input>
-      <el-table :data="tableData" border style="width: 100%;">
-        <el-table-column prop="state" label="状态"></el-table-column>
-        <el-table-column prop="name" label="名称"></el-table-column>
-        <el-table-column prop="media" label="备份介质"></el-table-column>        
-        <el-table-column prop="serverIP" label="工作机IP地址"></el-table-column>
-        <el-table-column prop="target" label="复制目录和文件"></el-table-column>
-        <el-table-column prop="DR" label="灾备机"></el-table-column>
-        <el-table-column prop="acion" label="操作"></el-table-column>
-      </el-table>
+      <el-row>
+        <el-table :data="tableData" border style="width: 100%; height: 100%">
+          <el-table-column prop="name" label="名称" ></el-table-column>
+          <el-table-column prop="object" label="备份对象" ></el-table-column>
+          <el-table-column prop="media" label="备份介质" width="120"></el-table-column>        
+          <el-table-column prop="storageIP" label="存储IP地址"></el-table-column>
+          <el-table-column prop="timeInterval" label="备份时间间隔"></el-table-column>
+          <el-table-column prop="method" label="备份方式"></el-table-column>
+          <el-table-column prop="action" label="操作" width="180">
+            <template scope="scope">
+              <el-button size="small">编辑</el-button>
+              <el-button size="small" type="danger">删除</el-button>
+              
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-row>
+      
     </div>
     <el-dialog title="新增策略" v-model="dialogVisible" size="small"> 
       <el-form ref="newPolicyForm" :model="newPolicyForm" label-width="120px" style="width: 80%">
@@ -49,7 +64,35 @@
     name: "strategy-configure",
     data () {
       return {
-        tableData: [],
+        tableData: [{
+          name: "备份一",
+          object: "操作系统",
+          media: "Disk",
+          storageIP: "1.2.3.4",
+          timeInterval: "10分钟",
+          method: "全备份"          
+        }, {
+          name: "备份二",
+          object: "数据卷",
+          media: "Disk",
+          storageIP: "1.2.3.4",
+          timeInterval: "半小时",
+          method: "差分增量备份"          
+        }, {
+          name: "备份三",
+          object: "数据库",
+          media: "Disk",
+          storageIP: "1.2.3.4",
+          timeInterval: "12小时",
+          method: "累计增量备份"          
+        }, {
+          name: "备份四",
+          object: "文件",
+          media: "Disk",
+          storageIP: "1.2.3.4",
+          timeInterval: "24小时",
+          method: "全备份"          
+        }],
         dialogVisible: false,
         newPolicyForm: {}
       }
