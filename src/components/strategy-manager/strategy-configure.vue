@@ -33,7 +33,6 @@
         :total="50"
         style="text-align: right; margin-top: 10px;"
       >
-
       </el-pagination>
     </div>
     <el-dialog title="新增策略" v-model="dialogVisible" size="small"> 
