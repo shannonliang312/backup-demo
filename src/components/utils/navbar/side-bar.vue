@@ -106,7 +106,7 @@
             <ul>
               <router-link to="/user-manager">用户管理</router-link>
               <router-link to="/group-manager">角色管理</router-link>
-              <!--<router-link to="/permission-manager">权限管理</router-link>-->
+              <router-link to="/permission-manager">权限管理</router-link>
             </ul>
           </li>          
         </ul>
