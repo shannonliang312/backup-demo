@@ -40,17 +40,31 @@
         <el-form-item label="名称:">
           <el-input v-model="newPolicyForm.name"></el-input>
         </el-form-item>
+        <el-form-item label="备份对象:">
+          <el-select v-model="newPolicyForm.object">
+            <el-option label="操作系统" value="os"></el-option>
+            <el-option label="数据卷" value="volume"></el-option>
+            <el-option label="数据库" value="database"></el-option>
+            <el-option label="文件" value="file"></el-option>
+          </el-select>
+        </el-form-item>
         <el-form-item label="备份介质:">
           <el-input v-model="newPolicyForm.media"></el-input>
         </el-form-item>
-        <el-form-item label="工作机IP地址:">
+        <el-form-item label="存储IP地址:">
           <el-input v-model="newPolicyForm.serverIP"></el-input>
         </el-form-item>
         <el-form-item label="复制目录和文件:">
           <el-input v-model="newPolicyForm.target"></el-input>
         </el-form-item>
-        <el-form-item label="灾备机:">
-          <el-input v-model="newPolicyForm.DR"></el-input>
+        <el-form-item label="备份时间间隔:">
+          <el-select v-model="newPolicyForm.timeInterval">
+            <el-option label="5分钟" value="5min"></el-option>
+            <el-option label="30分钟" value="30min"></el-option>
+            <el-option label="1小时" value="1hour"></el-option>
+            <el-option label="24小时" value="24hour"></el-option>
+            <el-option label="1周" value="1week"></el-option>
+          </el-select>
         </el-form-item>
         <el-form-item>
           <el-button type="primary">提交</el-button>

@@ -5,7 +5,7 @@
     </div>
     <div class="router-box-body">
       <el-button type="primary" style="margin-bottom: 20px;" @click="showDialog">
-        <i class="fa fa-plus" aria-hidden="true"></i>添加备份服务器
+        <i class="fa fa-plus" aria-hidden="true"></i>添加存储服务器
       </el-button>
       <el-input type="text" style="width: 20%;float: right" placeholder="搜索"></el-input>
       <el-table :data="tableData" border style="width: 100%;">
@@ -17,6 +17,7 @@
           </template>
         </el-table-column>
         <el-table-column prop="name" label="名称"></el-table-column>
+        <el-table-column prop="ip" label="IP地址"></el-table-column>
         <el-table-column prop="media" label="存储介质"></el-table-column>
         <el-table-column prop="space" label="存储空间"></el-table-column>
         <el-table-column prop="diskInfo" label="存储空间使用">
@@ -41,16 +42,25 @@
     </div>
     <el-dialog title="新增备份服务器" v-model="dialogVisible" size="small"> 
       <el-form ref="newServerForm" :model="newServerForm" label-width="120px" style="width: 80%">
+        <el-form-item label="状态:">
+          <el-select v-model="newServerForm.state" placeholder="请选择存储服务器状态">
+            <el-option label="在线" value="online"></el-option>
+            <el-option label="离线" value="offline"></el-option>
+          </el-select>
+        </el-form-item>
         <el-form-item label="名称:">
           <el-input v-model="newServerForm.name"></el-input>
         </el-form-item>
         <el-form-item label="IP地址:">
           <el-input v-model="newServerForm.serverIP"></el-input>
         </el-form-item>
-        <el-form-item label="系统信息:">
-          <el-input v-model="newServerForm.systemInfo"></el-input>
+        <el-form-item label="存储介质:">
+          <el-select v-model="newServerForm.state" placeholder="请选择存储介质">
+            <el-option label="NTFS" value="ntfs"></el-option>
+            <el-option label="磁带" value="tape"></el-option>
+          </el-select>
         </el-form-item>
-        <el-form-item label="磁盘信息:">
+        <el-form-item label="存储空间:">
           <el-input v-model="newServerForm.diskInfo"></el-input>
         </el-form-item>        
         <el-form-item>
@@ -72,6 +82,7 @@
           stateTag: "success",
           stateIcon: "fa fa-check",
           name: "存储一",
+          ip: "1.2.3.4",
           media: "NTFS",
           space: "500G",
           spaceUsed: "0.5"
@@ -80,6 +91,7 @@
           stateTag: "danger",
           stateIcon: "fa fa-close",
           name: "存储二",
+          ip: "1.2.3.5",
           media: "NTFS",
           space: "1000G",
           spaceUsed: "0.72"
@@ -88,6 +100,7 @@
           stateTag: "success",
           stateIcon: "fa fa-check",
           name: "存储一",
+          ip: "1.2.3.22",
           media: "NTFS",
           space: "500G",
           spaceUsed: "0.5"
@@ -96,6 +109,7 @@
           stateTag: "danger",
           stateIcon: "fa fa-close",
           name: "存储二",
+          ip: "1.2.3.23",
           media: "NTFS",
           space: "1000G",
           spaceUsed: "0.72"
@@ -104,6 +118,7 @@
           stateTag: "success",
           stateIcon: "fa fa-check",
           name: "存储一",
+          ip: "1.2.3.40",
           media: "NTFS",
           space: "500G",
           spaceUsed: "0.5"
@@ -112,6 +127,7 @@
           stateTag: "danger",
           stateIcon: "fa fa-close",
           name: "存储二",
+          ip: "1.2.44.4",
           media: "NTFS",
           space: "1000G",
           spaceUsed: "0.72"
