@@ -24,7 +24,7 @@
         <el-table-column prop="action" label="操作" width="180">
           <template scope="scope">
             <el-button size="small">编辑</el-button>
-            <el-button size="small" type="danger">删除</el-button>              
+            <el-button size="small" type="danger" @click="deleteStrategy">删除</el-button>              
           </template>
         </el-table-column>
       </el-table>
@@ -35,7 +35,7 @@
       >
       </el-pagination>
     </div>
-    <el-dialog title="新增策略" v-model="dialogVisible" size="small"> 
+    <el-dialog title="编辑策略" v-model="dialogVisible" size="small"> 
       <el-form ref="newPolicyForm" :model="newPolicyForm" label-width="120px" style="width: 80%">
         <el-form-item label="名称:">
           <el-input v-model="newPolicyForm.name"></el-input>
@@ -54,8 +54,8 @@
         <el-form-item label="存储IP地址:">
           <el-input v-model="newPolicyForm.serverIP"></el-input>
         </el-form-item>
-        <el-form-item label="复制目录和文件:">
-          <el-input v-model="newPolicyForm.target"></el-input>
+        <el-form-item label="备份保存时间:">
+          <el-input v-model="newPolicyForm.keepTime"></el-input>
         </el-form-item>
         <el-form-item label="备份时间间隔:">
           <el-select v-model="newPolicyForm.timeInterval">
@@ -72,6 +72,11 @@
         </el-form-item>
       </el-form>
     </el-dialog>
+    <el-dialog title="删除策略" v-model="deleteDialogVisible">
+      <h4 style="margin-bottom: 30px">确定删除策略一？此操作不可逆</h4>
+      <el-button type="danger">确定</el-button>
+      <el-button type="warning" @click="hideDialog">取消</el-button>
+    </el-dialog>
   </div>
 </template>
 
@@ -80,6 +85,7 @@
     name: "strategy-configure",
     data () {
       return {
+        deleteDialogVisible: false,
         tableData: [{
           name: "策略一",
           object: "操作系统",
@@ -110,7 +116,10 @@
           method: "全备份"          
         }],
         dialogVisible: false,
-        newPolicyForm: {}
+        newPolicyForm: {
+          object: "",
+          timeInterval: ""
+        }
       }
     },
     methods: {
@@ -119,7 +128,10 @@
       },
       hideDialog() {
         this.dialogVisible = false;
-      }
+      },
+      deleteStrategy() {
+        this.deleteDialogVisible = true;
+      },
     }
   }
 </script>

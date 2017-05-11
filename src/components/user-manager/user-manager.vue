@@ -27,7 +27,7 @@
         <el-table-column prop="action" label="操作">
           <template scope="scope">
             <el-button size="small" @click="editDialog">编辑</el-button>
-            <el-button size="small" type="danger">删除</el-button>              
+            <el-button size="small" type="danger" @click="deleteUser">删除</el-button>              
           </template>
         </el-table-column>
       </el-table>
@@ -77,6 +77,7 @@
       return {
         addFlag: true,
         dialogVisible: false,
+        deleteDialogVisible: false,
         newUserForm: {
           role: ""
         },
@@ -147,6 +148,9 @@
       editDialog() {
         this.addFlag = false;
         this.dialogVisible = true;
+      },
+      deleteUser() {
+        this.deleteDialogVisible = true;
       },
       hideDialog() {
         this.dialogVisible = false;

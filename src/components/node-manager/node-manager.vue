@@ -48,7 +48,7 @@
         <el-table-column prop="action" label="操作" width="180">
           <template scope="scope">
             <el-button size="small">编辑</el-button>
-            <el-button size="small" type="danger">删除</el-button>              
+            <el-button size="small" type="danger" @click="deleteNode">删除</el-button>              
           </template>
         </el-table-column>
       </el-table>
@@ -91,6 +91,11 @@
         </el-form-item>
       </el-form>
     </el-dialog>
+    <el-dialog title="删除节点" v-model="deleteDialogVisible">
+      <h4 style="margin-bottom: 30px">确定删除节点一？此操作不可逆</h4>
+      <el-button type="danger">确定</el-button>
+      <el-button type="warning" @click="hideDialog">取消</el-button>
+    </el-dialog>
   </div>
 </template>
 
@@ -99,6 +104,7 @@
     name: "node-manager",
     data () {
       return {
+        deleteDialogVisible: false,
         tableData: [{
           id: "11234",
           state: "已备份",
@@ -178,6 +184,9 @@
       },
       hideDialog() {
         this.dialogVisible = false;
+      },
+      deleteNode() {
+        this.deleteDialogVisible = true;
       }
     }
   }

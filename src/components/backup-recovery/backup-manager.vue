@@ -22,8 +22,8 @@
         <el-table-column prop="action" label="操作">
           <template scope="scope">
             <el-button size="small">编辑</el-button>
-            <el-button size="small" type="primary">执行</el-button>
-            <el-button size="small" type="danger">删除</el-button>              
+            <el-button size="small" type="primary" @click="excuteTask">执行</el-button>
+            <el-button size="small" type="danger" @click="deleteTask">删除</el-button>              
           </template>
         </el-table-column>
       </el-table>
@@ -34,7 +34,7 @@
       >
       </el-pagination>
     </div>
-    <el-dialog title="添加新作业" v-model="dialogVisible">
+    <el-dialog title="添加新备份作业" v-model="dialogVisible">
       <el-form ref="taskForm" :model="taskForm" label-width="100px">
         <el-form-item label="作业名称：">
           <el-input v-model="taskForm.name"></el-input>
@@ -50,7 +50,21 @@
         <el-form-item label="工作机IP：">
           <el-input v-model="taskForm.ip"></el-input>
         </el-form-item>
+        <el-form-item>
+          <el-button type="primary">提交</el-button>
+          <el-button type="warning" @click="hideDialog">取消</el-button>
+        </el-form-item>
       </el-form>
+    </el-dialog>
+    <el-dialog title="删除备份作业" v-model="deleteDialogVisible">
+      <h4 style="margin-bottom: 30px">确定删除作业一？此操作不可逆</h4>
+      <el-button type="danger">确定</el-button>
+      <el-button type="warning" @click="hideDialog">取消</el-button>
+    </el-dialog>
+    <el-dialog title="执行备份作业" v-model="excuteDialogVisible">
+      <h4 style="margin-bottom: 30px">确定执行作业一？</h4>
+      <el-button type="primary">确定</el-button>
+      <el-button type="warning" @click="hideDialog">取消</el-button>
     </el-dialog>
   </div>
 </template>
@@ -60,6 +74,8 @@
     name: "backup-manager",
     data() {
       return {
+        excuteDialogVisible: false,
+        deleteDialogVisible: false,
         dialogVisible: false,
         taskForm: {},
         tableData: [{
@@ -141,6 +157,12 @@
       },
       hideDialog() {
         this.dialogVisible = false;
+      },
+      deleteTask() {
+        this.deleteDialogVisible = true;
+      },
+      excuteTask() {
+        this.excuteDialogVisible = true;
       }
     }
   }

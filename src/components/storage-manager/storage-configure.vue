@@ -40,7 +40,7 @@
       >
       </el-pagination>
     </div>
-    <el-dialog title="新增备份服务器" v-model="dialogVisible" size="small"> 
+    <el-dialog title="编辑存储服务器" v-model="dialogVisible" size="small"> 
       <el-form ref="newServerForm" :model="newServerForm" label-width="120px" style="width: 80%">
         <el-form-item label="状态:">
           <el-select v-model="newServerForm.state" placeholder="请选择存储服务器状态">
@@ -55,7 +55,7 @@
           <el-input v-model="newServerForm.serverIP"></el-input>
         </el-form-item>
         <el-form-item label="存储介质:">
-          <el-select v-model="newServerForm.state" placeholder="请选择存储介质">
+          <el-select v-model="newServerForm.media" placeholder="请选择存储介质">
             <el-option label="NTFS" value="ntfs"></el-option>
             <el-option label="磁带" value="tape"></el-option>
           </el-select>
@@ -133,7 +133,10 @@
           spaceUsed: "0.72"
         }],
         dialogVisible: false,
-        newServerForm: {}
+        newServerForm: {
+          state: "",
+          media: ""
+        }
       }
     },
     methods: {
