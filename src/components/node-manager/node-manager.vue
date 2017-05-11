@@ -8,7 +8,7 @@
         <i class="fa fa-plus" aria-hidden="true"></i>添加新节点
       </el-button>
       <el-input type="text" style="width: 20%;float: right" placeholder="搜索"></el-input>
-      <el-table :data="tableData" border style="width: 100%;">
+      <el-table :data="tableData" border style="width: 100%;" stripe>
         <el-table-column type="expand">
           <template scope="props">
             <el-form label-position="left" inline class="demo-table-expand">

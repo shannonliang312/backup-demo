@@ -7,7 +7,7 @@
       <el-button type="primary" style="margin-bottom: 20px;">
         <i class="fa fa-pencil" aria-hidden="true"></i>编辑权限
       </el-button>
-      <el-table :data="tableData" border style="width: 100%;">
+      <el-table :data="tableData" border style="width: 100%;" stripe="true">
         <el-table-column label="角色" prop="role"></el-table-column>
         <el-table-column label="系统概览"  align="center">
           <template scope="scope">
