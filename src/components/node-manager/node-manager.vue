@@ -70,8 +70,20 @@
         <el-form-item label="系统信息:">
           <el-input v-model="newNodeForm.systemInfo"></el-input>
         </el-form-item>
-        <el-form-item label="磁盘信息:">
-          <el-input v-model="newNodeForm.diskInfo"></el-input>
+        <el-form-item label="数据库：">
+          <el-radio-group v-model="newNodeForm.database">
+            <el-radio :label="true">有</el-radio>
+            <el-radio :label="false">无</el-radio>
+          </el-radio-group>          
+        </el-form-item>
+        <el-form-item label="数据库名称:">
+          <el-input v-model="newNodeForm.dbName" :disabled="!newNodeForm.database"></el-input>
+        </el-form-item>
+        <el-form-item label="数据库地址:">
+          <el-input v-model="newNodeForm.dbIP" :disabled="!newNodeForm.database"></el-input>
+        </el-form-item>
+        <el-form-item label="数据库密码:">
+          <el-input v-model="newNodeForm.dbPsw" :disabled="!newNodeForm.database"></el-input>
         </el-form-item>        
         <el-form-item>
           <el-button type="primary">提交</el-button>
@@ -144,7 +156,9 @@
           lastRecoveryTime: "2017-05-09 16:44:23"
         }],
         dialogVisible: false,
-        newNodeForm: {}
+        newNodeForm: {
+          database: ""
+        }
       }
     },
     computed: {

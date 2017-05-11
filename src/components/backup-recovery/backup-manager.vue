@@ -4,7 +4,7 @@
       备份作业管理
     </div>
     <div class="router-box-body">
-      <el-button type="primary" style="margin-bottom: 20px;">
+      <el-button type="primary" style="margin-bottom: 20px;" @click="showDialog">
         <i class="fa fa-plus" aria-hidden="true"></i>添加新作业
       </el-button>
       <el-input type="text" style="width: 20%;float: right" placeholder="搜索"></el-input>
@@ -34,6 +34,24 @@
       >
       </el-pagination>
     </div>
+    <el-dialog title="添加新作业" v-model="dialogVisible">
+      <el-form ref="taskForm" :model="taskForm" label-width="100px">
+        <el-form-item label="作业名称：">
+          <el-input v-model="taskForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="策略选择：">
+          <el-select v-model="taskForm.strategy">
+            <el-option label="策略一" value="strategy1"></el-option>
+            <el-option label="策略二" value="strategy2"></el-option>
+            <el-option label="策略三" value="strategy3"></el-option>
+            <el-option label="策略四" value="strategy4"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="工作机IP：">
+          <el-input v-model="taskForm.ip"></el-input>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 
@@ -42,6 +60,8 @@
     name: "backup-manager",
     data() {
       return {
+        dialogVisible: false,
+        taskForm: {},
         tableData: [{
           name: "作业一",
           state: "执行中",
@@ -113,6 +133,14 @@
           strategy: "策略二",
           node: "173.43.126.86"
         }]
+      }
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+      },
+      hideDialog() {
+        this.dialogVisible = false;
       }
     }
   }
