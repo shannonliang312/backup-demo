@@ -18,7 +18,7 @@
         <el-table-column prop="node" label="节点"></el-table-column>
         <el-table-column prop="action" label="操作">
           <template scope="scope">
-            <el-button size="small" type="primary">恢复</el-button>
+            <el-button size="small" type="primary" @click="showDialog">恢复</el-button>
             <el-button size="small" type="danger">删除</el-button>              
           </template>
         </el-table-column>
@@ -30,7 +30,23 @@
       >
       </el-pagination>
     </div>
-    <el-dialog></el-dialog>
+    <el-dialog title="系统还原作业" v-model="dialogVisible">
+      <el-form ref="taskForm" :model="taskForm" label-width="100px">
+        <el-form-item label="恢复到：">
+          <el-select v-model="taskForm.target">
+            <el-option label="本机" value="self"></el-option>
+            <el-option label="其他目标机" value="other"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="目标机IP：">
+          <el-input v-model="taskForm.targetIP" style="width: 50%" :disabled="taskForm.target == 'self'"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary">提交</el-button>
+          <el-button type="warning" @click="hideDialog">取消</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 
@@ -39,6 +55,10 @@
     name: "recovery-manager",
     data () {
       return {
+        taskForm: {
+          target: "self",
+          targetIP: ""
+        },
         tableData: [{
           time: "2017-05-03 22:45:47",
           task: "全备份一",
@@ -96,9 +116,16 @@
         backupTypeList: ["全备份", "差分增量备份", "累计增量备份"],
         currentNode: "全部",
         currentBackupType: "全备份",
-
       }
     },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+      },
+      hideDialog() {
+        this.dialogVisible = false;
+      }
+    }
   }
 </script>
 

@@ -83,6 +83,38 @@
           media: "NTFS",
           space: "1000G",
           spaceUsed: "0.72"
+        },{
+          state: "在线",
+          stateTag: "success",
+          stateIcon: "fa fa-check",
+          name: "存储一",
+          media: "NTFS",
+          space: "500G",
+          spaceUsed: "0.5"
+        },{
+          state: "离线",
+          stateTag: "danger",
+          stateIcon: "fa fa-close",
+          name: "存储二",
+          media: "NTFS",
+          space: "1000G",
+          spaceUsed: "0.72"
+        },{
+          state: "在线",
+          stateTag: "success",
+          stateIcon: "fa fa-check",
+          name: "存储一",
+          media: "NTFS",
+          space: "500G",
+          spaceUsed: "0.5"
+        },{
+          state: "离线",
+          stateTag: "danger",
+          stateIcon: "fa fa-close",
+          name: "存储二",
+          media: "NTFS",
+          space: "1000G",
+          spaceUsed: "0.72"
         }],
         dialogVisible: false,
         newServerForm: {}
