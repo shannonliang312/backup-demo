@@ -1,64 +1,52 @@
 <template>
   <div id="app-main">
     <!--<top-bar></top-bar>-->
-    <transition 
-        appear
-        name="custom-classes-transition"
-        enter-active-class="animated fadeIn"      
-      >
+    <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn">
       <top-bar-2 @toggle="getToggleState"></top-bar-2>
     </transition>
-    <transition 
-        appear
-        name="custom-classes-transition"
-        enter-active-class="animated fadeIn"      
-      >
+    <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn">
       <side-bar :isCollapsed="collapseState"></side-bar>
     </transition>
     <div :style="containerClass">
-      <transition 
-        appear
-        name="custom-classes-transition"
-        enter-active-class="animated fadeIn"      
-      >
-      <router-view></router-view>
-    </transition>
-      <!--<router-view></router-view>-->      
+      <transition appear name="custom-classes-transition" enter-active-class="animated fadeIn">
+        <router-view></router-view>
+      </transition>
+      <!--<router-view></router-view>-->
     </div>
-    
+  
   </div>
 </template>
 
 <script>
-  import TopBar from '@/components/utils/navbar/top-bar.vue'
-  import TopBar2 from '@/components/utils/navbar/top-bar-2.vue'
-  import SideBar from '@/components/utils/navbar/side-bar.vue'
+import TopBar from '@/components/utils/navbar/top-bar.vue'
+import TopBar2 from '@/components/utils/navbar/top-bar-2.vue'
+import SideBar from '@/components/utils/navbar/side-bar.vue'
 
 export default {
   name: 'layout',
-  data() {
+  data () {
     return {
       collapseState: true
     }
   },
   computed: {
-    containerClass: function() {
+    containerClass: function () {
       return {
-        "height": "100%",
-        "padding-top": "70px",
-        "padding-right": "2%",
-        "padding-left": this.collapseState?"7%": "270px",
-        "padding-bottom": "30px",
-        "transition": "padding-left 100ms" ,
-        "transition-delay": "100ms",
-        // "background": "#f5f5f5"
+        'height': '100%',
+        'padding-top': '70px',
+        'padding-right': '2%',
+        'padding-left': this.collapseState ? '7%' : '270px',
+        'padding-bottom': '30px',
+        'transition': 'padding-left 100ms',
+        'transition-delay': '100ms'
+        // 'background': '#f5f5f5'
       }
     }
   },
   methods: {
-    getToggleState(value) {
-      this.collapseState = value.toggleState;
-      console.log(value);
+    getToggleState (value) {
+      this.collapseState = value.toggleState
+      console.log(value)
     }
   },
   components: {
@@ -77,8 +65,8 @@ export default {
   color: #2c3e50;
 }
 
-  .router-container {
-    padding-top: 70px;
-    padding-left: 16%;
-  }
+.router-container {
+  padding-top: 70px;
+  padding-left: 16%;
+}
 </style>

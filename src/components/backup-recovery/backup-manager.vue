@@ -71,98 +71,98 @@
 
 <script>
   export default {
-    name: "backup-manager",
-    data() {
+    name: 'backup-manager',
+    data () {
       return {
         excuteDialogVisible: false,
         deleteDialogVisible: false,
         dialogVisible: false,
         taskForm: {},
         tableData: [{
-          name: "作业一",
-          state: "执行中",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          strategy: "策略一",
-          node: "173.43.26.86"
-        },{
-          name: "作业二",
-          state: "未执行",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          strategy: "策略五",
-          node: "173.43.26.186"
-        },{
-          name: "作业三",
-          state: "执行中",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          strategy: "策略三",
-          node: "173.43.26.26"
-        },{
-          name: "作业四",
-          state: "执行中",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          strategy: "策略四",
-          node: "173.43.26.66"
-        },{
-          name: "作业五",
-          state: "未执行",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          strategy: "策略二",
-          node: "173.43.126.86"
-        },{
-          name: "作业一",
-          state: "执行中",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          strategy: "策略一",
-          node: "173.43.26.86"
-        },{
-          name: "作业二",
-          state: "未执行",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          strategy: "策略五",
-          node: "173.43.26.186"
-        },{
-          name: "作业三",
-          state: "执行中",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          strategy: "策略三",
-          node: "173.43.26.26"
-        },{
-          name: "作业四",
-          state: "执行中",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          strategy: "策略四",
-          node: "173.43.26.66"
-        },{
-          name: "作业五",
-          state: "未执行",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          strategy: "策略二",
-          node: "173.43.126.86"
+          name: '作业一',
+          state: '执行中',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          strategy: '策略一',
+          node: '173.43.26.86'
+        }, {
+          name: '作业二',
+          state: '未执行',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          strategy: '策略五',
+          node: '173.43.26.186'
+        }, {
+          name: '作业三',
+          state: '执行中',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          strategy: '策略三',
+          node: '173.43.26.26'
+        }, {
+          name: '作业四',
+          state: '执行中',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          strategy: '策略四',
+          node: '173.43.26.66'
+        }, {
+          name: '作业五',
+          state: '未执行',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          strategy: '策略二',
+          node: '173.43.126.86'
+        }, {
+          name: '作业一',
+          state: '执行中',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          strategy: '策略一',
+          node: '173.43.26.86'
+        }, {
+          name: '作业二',
+          state: '未执行',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          strategy: '策略五',
+          node: '173.43.26.186'
+        }, {
+          name: '作业三',
+          state: '执行中',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          strategy: '策略三',
+          node: '173.43.26.26'
+        }, {
+          name: '作业四',
+          state: '执行中',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          strategy: '策略四',
+          node: '173.43.26.66'
+        }, {
+          name: '作业五',
+          state: '未执行',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          strategy: '策略二',
+          node: '173.43.126.86'
         }]
       }
     },
     methods: {
-      showDialog() {
-        this.dialogVisible = true;
+      showDialog () {
+        this.dialogVisible = true
       },
-      hideDialog() {
-        this.dialogVisible = false;
+      hideDialog () {
+        this.dialogVisible = false
       },
-      deleteTask() {
-        this.deleteDialogVisible = true;
+      deleteTask () {
+        this.deleteDialogVisible = true
       },
-      excuteTask() {
-        this.excuteDialogVisible = true;
+      excuteTask () {
+        this.excuteDialogVisible = true
       }
     }
   }

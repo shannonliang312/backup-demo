@@ -34,22 +34,22 @@
 
 <script>
   export default {
-    name: "log-manager",
+    name: 'log-manager',
     data () {
       return {
         tableData: [{
-          time: "2017-05-05 22:22:22",
-          action: "登录",
-          message: "用户admin1进行登录操作，登录IP：22.33.44.55",
-          result: "成功"
-        },{
-          time: "2017-05-05 22:22:33",
-          action: "登出",
-          message: "用户admin2进行登出操作",
-          result: "成功"
+          time: '2017-05-05 22:22:22',
+          action: '登录',
+          message: '用户admin1进行登录操作，登录IP：22.33.44.55',
+          result: '成功'
+        }, {
+          time: '2017-05-05 22:22:33',
+          action: '登出',
+          message: '用户admin2进行登出操作',
+          result: '成功'
         }],
-        startTime: "",
-        endTime: ""
+        startTime: '',
+        endTime: ''
       }
     }
   }

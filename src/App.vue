@@ -33,37 +33,37 @@
   import SideBar from '@/components/utils/navbar/side-bar.vue'
 
 export default {
-  name: 'app',
-  data() {
-    return {
-      collapseState: false
-    }
-  },
-  computed: {
-    containerClass: function() {
+    name: 'app',
+    data () {
       return {
-        "height": "100%",
-        "padding-top": "70px",
-        "padding-right": "1%",
-        "padding-left": this.collapseState?"6%": "260px",
-        "padding-bottom": "30px",
-        "transition": "padding-left 100ms" ,
-        "transition-delay": "100ms",
-        // "background": "#f5f5f5"
+        collapseState: false
       }
+    },
+    computed: {
+      containerClass: function () {
+        return {
+          'height': '100%',
+          'padding-top': '70px',
+          'padding-right': '1%',
+          'padding-left': this.collapseState ? '6%' : '260px',
+          'padding-bottom': '30px',
+          'transition': 'padding-left 100ms',
+          'transition-delay': '100ms'
+        // "background": "#f5f5f5"
+        }
+      }
+    },
+    methods: {
+      getToggleState (value) {
+        this.collapseState = value.toggleState
+        console.log(value)
+      }
+    },
+    components: {
+      TopBar,
+      TopBar2,
+      SideBar
     }
-  },
-  methods: {
-    getToggleState(value) {
-      this.collapseState = value.toggleState;
-      console.log(value);
-    }
-  },
-  components: {
-    TopBar,
-    TopBar2,
-    SideBar
-  }
 }
 </script>
 

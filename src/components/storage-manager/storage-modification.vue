@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: "storage-modification"
+    name: 'storage-modification'
   }
 </script>
 

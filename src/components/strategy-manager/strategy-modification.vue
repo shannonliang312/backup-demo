@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: "strategy-modification"
+    name: 'strategy-modification'
   }
 </script>
 

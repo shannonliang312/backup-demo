@@ -93,14 +93,14 @@
   import PieChart from './pie-chart'
 
   export default {
-    name: "dashboard",
-    data() {
+    name: 'dashboard',
+    data () {
       return {
         logData: [{
-          time: "2017-04-27 15:10:36",
-          action: "登录",
-          message: "登录成功, 登录客户端IP地址为:100.97.88.177 LOGIN DIRECTLY.",
-          result: "成功"
+          time: '2017-04-27 15:10:36',
+          action: '登录',
+          message: '登录成功, 登录客户端IP地址为:100.97.88.177 LOGIN DIRECTLY.',
+          result: '成功'
         }]
       }
     },

@@ -39,50 +39,50 @@
 </template>
 
 <script>
-  import { mapActions, mapMutations, mapGetters } from 'vuex'
-  //import { execLogin } from '../../service/login/loginService'
+  import { mapActions } from 'vuex'
+  // import { execLogin } from '../../service/login/loginService'
   import './login.css'
   // import axios from 'axios'
- 
+
   export default {
-    name: "login",
-    data() {
+    name: 'login',
+    data () {
       return {
         authFlag: false,
         formData: {
-          usr: "",
-          password: ""
+          usr: '',
+          password: ''
         },
         rules: {
           usr: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
-          password: [{ required: true, message: '密码不能为空', trigger: 'blur' }],
+          password: [{ required: true, message: '密码不能为空', trigger: 'blur' }]
         }
       }
     },
     computed: {
       // ...mapGetters(['getLoginState'])
     },
-    created() {
+    created () {
 
     },
     methods: {
       ...mapActions(['actLogin']),
       // ...mapMutations(['setRole']),
-      onSubmit(formName) { 
-         this.actLogin();
-         this.$router.push({ path: "/" });
-        //  if(this.formData.usr == "admin") {
-        //    this.setRole({role: "admin"});
+      onSubmit (formName) {
+        this.actLogin()
+        this.$router.push({ path: '/' })
+        //  if(this.formData.usr == 'admin') {
+        //    this.setRole({role: 'admin'})
         //  } else {
-        //    this.setRole({role: "normal"});
+        //    this.setRole({role: 'normal'})
         //  }
-         
-        //  this.$router.replace({ path: "/home" });
+
+        //  this.$router.replace({ path: '/home' })
         // // execLogin({usr: this.formData.usr, psw: this.formData.password}).then(function(res){
-        // //   console.log(res);
+        // //   console.log(res)
         // // })
-        // // console.log(execLogin);
-      },      
+        // // console.log(execLogin)
+      }
     }
   }
 </script>

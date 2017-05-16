@@ -117,7 +117,7 @@
 
 <script>
   export default {
-    name: "side-bar",
+    name: 'side-bar',
     props: {
       isCollapsed: {
         type: Boolean,
@@ -126,13 +126,13 @@
     },
     data () {
       return {
-        // isCollapsed: false  
+        // isCollapsed: false
       }
     },
     methods: {
-      toggleMenu() {
-        this.isCollapsed = !this.isCollapsed;
-        this.$emit("toggle", {state: this.isCollapsed});
+      toggleMenu () {
+        this.isCollapsed = !this.isCollapsed
+        this.$emit('toggle', {state: this.isCollapsed})
       }
     }
   }

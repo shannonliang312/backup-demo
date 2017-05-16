@@ -1,7 +1,7 @@
 import { Line } from 'vue-chartjs'
 
 export default Line.extend({
-  data() {
+  data () {
     return {
       datacollection: {
         labels: ['1', '2', '3', '4', '5'],

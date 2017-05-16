@@ -94,48 +94,48 @@
 
 <script>
   export default {
-    name: "permission-manager",
-    data() {
+    name: 'permission-manager',
+    data () {
       return {
         tableData: [{
-          role: "普通管理员",
-          systemOverview: { permission: true, tag: "success", icon: "fa fa-check" },
-          sessionManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          strategyManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          taskManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          nodeManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          storageManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          userManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          roleManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          permissionManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          logManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          reportManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-        },{
-          role: "系统管理员",
-          systemOverview: { permission: true, tag: "success", icon: "fa fa-check" },
-          sessionManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          strategyManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          taskManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          nodeManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          storageManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          userManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          roleManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          permissionManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          logManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          reportManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-        },{
-          role: "审计管理员",
-          systemOverview: { permission: true, tag: "success", icon: "fa fa-check" },
-          sessionManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          strategyManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          taskManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          nodeManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          storageManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          userManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          roleManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          permissionManagement: { permission: false, tag: "danger", icon: "fa fa-close" },
-          logManagement: { permission: true, tag: "success", icon: "fa fa-check" },
-          reportManagement: { permission: true, tag: "success", icon: "fa fa-check" },
+          role: '普通管理员',
+          systemOverview: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          sessionManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          strategyManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          taskManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          nodeManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          storageManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          userManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          roleManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          permissionManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          logManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          reportManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' }
+        }, {
+          role: '系统管理员',
+          systemOverview: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          sessionManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          strategyManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          taskManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          nodeManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          storageManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          userManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          roleManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          permissionManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          logManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          reportManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' }
+        }, {
+          role: '审计管理员',
+          systemOverview: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          sessionManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          strategyManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          taskManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          nodeManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          storageManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          userManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          roleManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          permissionManagement: { permission: false, tag: 'danger', icon: 'fa fa-close' },
+          logManagement: { permission: true, tag: 'success', icon: 'fa fa-check' },
+          reportManagement: { permission: true, tag: 'success', icon: 'fa fa-check' }
         }]
       }
     }

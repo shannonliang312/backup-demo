@@ -101,92 +101,92 @@
 
 <script>
   export default {
-    name: "node-manager",
+    name: 'node-manager',
     data () {
       return {
         deleteDialogVisible: false,
         tableData: [{
-          id: "11234",
-          state: "已备份",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          ip: "10.33.125.87",
-          os: "CentOS 7.1",
-          DBinfo: "Postgres 9",
-          strategies: ["策略一", "策略二"],
-          lastBackupTime: "2017-05-09 10:44:23",
-          lastRecoveryTime: "2017-05-09 16:44:23"
-        },{
-          id: "44564",
-          state: "未备份",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          ip: "104.33.125.87",
-          os: "CentOS 7.1",
-          DBinfo: "Postgres 9",
-          strategies: ["策略一", "策略三"],
-          lastBackupTime: "",
-          lastRecoveryTime: "2017-05-09 16:44:23"
-        },{
-          id: "34619",
-          state: "已备份",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          ip: "10.33.125.87",
-          os: "CentOS 7.1",
-          DBinfo: "Postgres 9",
-          strategies: ["策略一", "策略二"],
-          lastBackupTime: "2017-05-09 10:44:23",
-          lastRecoveryTime: "2017-05-09 16:44:23"
-        },{
-          id: "11234",
-          state: "已备份",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          ip: "10.33.125.87",
-          os: "CentOS 7.1",
-          DBinfo: "Postgres 9",
-          strategies: ["策略一", "策略二"],
-          lastBackupTime: "2017-05-09 10:44:23",
-          lastRecoveryTime: "2017-05-09 16:44:23"
-        },{
-          id: "11234",
-          state: "已备份",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          ip: "10.33.125.87",
-          os: "CentOS 7.1",
-          DBinfo: "Postgres 9",
-          strategies: ["策略一", "策略二"],
-          lastBackupTime: "2017-05-09 10:44:23",
-          lastRecoveryTime: "2017-05-09 16:44:23"
+          id: '11234',
+          state: '已备份',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          ip: '10.33.125.87',
+          os: 'CentOS 7.1',
+          DBinfo: 'Postgres 9',
+          strategies: ['策略一', '策略二'],
+          lastBackupTime: '2017-05-09 10:44:23',
+          lastRecoveryTime: '2017-05-09 16:44:23'
+        }, {
+          id: '44564',
+          state: '未备份',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          ip: '104.33.125.87',
+          os: 'CentOS 7.1',
+          DBinfo: 'Postgres 9',
+          strategies: ['策略一', '策略三'],
+          lastBackupTime: '',
+          lastRecoveryTime: '2017-05-09 16:44:23'
+        }, {
+          id: '34619',
+          state: '已备份',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          ip: '10.33.125.87',
+          os: 'CentOS 7.1',
+          DBinfo: 'Postgres 9',
+          strategies: ['策略一', '策略二'],
+          lastBackupTime: '2017-05-09 10:44:23',
+          lastRecoveryTime: '2017-05-09 16:44:23'
+        }, {
+          id: '11234',
+          state: '已备份',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          ip: '10.33.125.87',
+          os: 'CentOS 7.1',
+          DBinfo: 'Postgres 9',
+          strategies: ['策略一', '策略二'],
+          lastBackupTime: '2017-05-09 10:44:23',
+          lastRecoveryTime: '2017-05-09 16:44:23'
+        }, {
+          id: '11234',
+          state: '已备份',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          ip: '10.33.125.87',
+          os: 'CentOS 7.1',
+          DBinfo: 'Postgres 9',
+          strategies: ['策略一', '策略二'],
+          lastBackupTime: '2017-05-09 10:44:23',
+          lastRecoveryTime: '2017-05-09 16:44:23'
         }],
         dialogVisible: false,
         newNodeForm: {
-          database: ""
+          database: ''
         }
       }
     },
     computed: {
-      stateTag: function(state) {
-        if(state == "已备份") {
-          return "success";
-        } else if (state == "未备份") {
-          return "danger";
+      stateTag: function (state) {
+        if (state === '已备份') {
+          return 'success'
+        } else if (state === '未备份') {
+          return 'danger'
         } else {
-          return "warning";
+          return 'warning'
         }
       }
     },
     methods: {
-      showDialog() {
-        this.dialogVisible = true;
+      showDialog () {
+        this.dialogVisible = true
       },
-      hideDialog() {
-        this.dialogVisible = false;
+      hideDialog () {
+        this.dialogVisible = false
       },
-      deleteNode() {
-        this.deleteDialogVisible = true;
+      deleteNode () {
+        this.deleteDialogVisible = true
       }
     }
   }
@@ -194,11 +194,11 @@
 
 <style scoped>
   i {
-    margin-right: 5px;
+    margin-right: 5px
   }
 
   .demo-table-expand {
-    font-size: 0;
+    font-size: 0
   }
   .demo-table-expand label {
     width: 90px;

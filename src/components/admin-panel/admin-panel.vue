@@ -26,20 +26,20 @@
 
 <script>
   export default {
-    name: "admin-panel",
+    name: 'admin-panel',
     data () {
       return {
         adminForm: {
-          user: "",
-          email: "",
-          group: "",
-          role: "",
-          permission: ""
+          user: '',
+          email: '',
+          group: '',
+          role: '',
+          permission: ''
         },
         pswForm: {
-          originPsw: "",
-          newPsw: "",
-          confirmPsw: ""
+          originPsw: '',
+          newPsw: '',
+          confirmPsw: ''
         }
       }
     }

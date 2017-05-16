@@ -1,7 +1,7 @@
 import { Pie } from 'vue-chartjs'
 
 export default Pie.extend({
-  props: ["pieData"],
+  props: ['pieData'],
   data () {
     return {
       datacollection: {
@@ -11,14 +11,14 @@ export default Pie.extend({
             // label: this.pieData.title,
             data: [40, 20, 100, 60],
             backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+              '#FF6384',
+              '#36A2EB',
+              '#FFCE56'
             ],
             hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+              '#FF6384',
+              '#36A2EB',
+              '#FFCE56'
             ]
           }
         ]

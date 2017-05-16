@@ -22,23 +22,23 @@
 </template>
 
 <script>
-  import { export_json_to_excel } from '@/service/excel/Export2Excel'
+  import { exportJsonToExcel } from '@/service/excel/Export2Excel'
   export default {
-    name: "report-manager",
-    data() {
+    name: 'report-manager',
+    data () {
       return {
         tableData: [{
-          name: "报表一",
-          time: "2017-05-04 22:22:22"
-        },{
-          name: "报表二",
-          time: "2017-05-05 11:11:11"
+          name: '报表一',
+          time: '2017-05-04 22:22:22'
+        }, {
+          name: '报表二',
+          time: '2017-05-05 11:11:11'
         }]
       }
     },
     methods: {
-      exportExcel() {
-        export_json_to_excel();
+      exportExcel () {
+        exportJsonToExcel()
       }
     }
   }

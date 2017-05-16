@@ -74,77 +74,77 @@
 
 <script>
   export default {
-    name: "storage-configure",
+    name: 'storage-configure',
     data () {
       return {
         tableData: [{
-          state: "在线",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          name: "存储一",
-          ip: "1.2.3.4",
-          media: "NTFS",
-          space: "500G",
-          spaceUsed: "0.5"
-        },{
-          state: "离线",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          name: "存储二",
-          ip: "1.2.3.5",
-          media: "NTFS",
-          space: "1000G",
-          spaceUsed: "0.72"
-        },{
-          state: "在线",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          name: "存储一",
-          ip: "1.2.3.22",
-          media: "NTFS",
-          space: "500G",
-          spaceUsed: "0.5"
-        },{
-          state: "离线",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          name: "存储二",
-          ip: "1.2.3.23",
-          media: "NTFS",
-          space: "1000G",
-          spaceUsed: "0.72"
-        },{
-          state: "在线",
-          stateTag: "success",
-          stateIcon: "fa fa-check",
-          name: "存储一",
-          ip: "1.2.3.40",
-          media: "NTFS",
-          space: "500G",
-          spaceUsed: "0.5"
-        },{
-          state: "离线",
-          stateTag: "danger",
-          stateIcon: "fa fa-close",
-          name: "存储二",
-          ip: "1.2.44.4",
-          media: "NTFS",
-          space: "1000G",
-          spaceUsed: "0.72"
+          state: '在线',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          name: '存储一',
+          ip: '1.2.3.4',
+          media: 'NTFS',
+          space: '500G',
+          spaceUsed: '0.5'
+        }, {
+          state: '离线',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          name: '存储二',
+          ip: '1.2.3.5',
+          media: 'NTFS',
+          space: '1000G',
+          spaceUsed: '0.72'
+        }, {
+          state: '在线',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          name: '存储一',
+          ip: '1.2.3.22',
+          media: 'NTFS',
+          space: '500G',
+          spaceUsed: '0.5'
+        }, {
+          state: '离线',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          name: '存储二',
+          ip: '1.2.3.23',
+          media: 'NTFS',
+          space: '1000G',
+          spaceUsed: '0.72'
+        }, {
+          state: '在线',
+          stateTag: 'success',
+          stateIcon: 'fa fa-check',
+          name: '存储一',
+          ip: '1.2.3.40',
+          media: 'NTFS',
+          space: '500G',
+          spaceUsed: '0.5'
+        }, {
+          state: '离线',
+          stateTag: 'danger',
+          stateIcon: 'fa fa-close',
+          name: '存储二',
+          ip: '1.2.44.4',
+          media: 'NTFS',
+          space: '1000G',
+          spaceUsed: '0.72'
         }],
         dialogVisible: false,
         newServerForm: {
-          state: "",
-          media: ""
+          state: '',
+          media: ''
         }
       }
     },
     methods: {
-      showDialog() {
-        this.dialogVisible = true;
+      showDialog () {
+        this.dialogVisible = true
       },
-      hideDialog() {
-        this.dialogVisible = false;
+      hideDialog () {
+        this.dialogVisible = false
       }
     }
   }

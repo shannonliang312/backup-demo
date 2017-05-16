@@ -82,56 +82,56 @@
 
 <script>
   export default {
-    name: "strategy-configure",
+    name: 'strategy-configure',
     data () {
       return {
         deleteDialogVisible: false,
         tableData: [{
-          name: "策略一",
-          object: "操作系统",
-          media: "Disk",
-          storageIP: "1.2.3.4",
-          timeInterval: "10分钟",
-          method: "全备份"          
+          name: '策略一',
+          object: '操作系统',
+          media: 'Disk',
+          storageIP: '1.2.3.4',
+          timeInterval: '10分钟',
+          method: '全备份'
         }, {
-          name: "策略二",
-          object: "数据卷",
-          media: "Disk",
-          storageIP: "1.2.3.4",
-          timeInterval: "半小时",
-          method: "差分增量备份"          
+          name: '策略二',
+          object: '数据卷',
+          media: 'Disk',
+          storageIP: '1.2.3.4',
+          timeInterval: '半小时',
+          method: '差分增量备份'
         }, {
-          name: "策略三",
-          object: "数据库",
-          media: "Disk",
-          storageIP: "1.2.3.4",
-          timeInterval: "12小时",
-          method: "累计增量备份"          
+          name: '策略三',
+          object: '数据库',
+          media: 'Disk',
+          storageIP: '1.2.3.4',
+          timeInterval: '12小时',
+          method: '累计增量备份'
         }, {
-          name: "策略四",
-          object: "文件",
-          media: "Disk",
-          storageIP: "1.2.3.4",
-          timeInterval: "24小时",
-          method: "全备份"          
+          name: '策略四',
+          object: '文件',
+          media: 'Disk',
+          storageIP: '1.2.3.4',
+          timeInterval: '24小时',
+          method: '全备份'
         }],
         dialogVisible: false,
         newPolicyForm: {
-          object: "",
-          timeInterval: ""
+          object: '',
+          timeInterval: ''
         }
       }
     },
     methods: {
-      showDialog() {
-        this.dialogVisible = true;
+      showDialog () {
+        this.dialogVisible = true
       },
-      hideDialog() {
-        this.dialogVisible = false;
+      hideDialog () {
+        this.dialogVisible = false
       },
-      deleteStrategy() {
-        this.deleteDialogVisible = true;
-      },
+      deleteStrategy () {
+        this.deleteDialogVisible = true
+      }
     }
   }
 </script>

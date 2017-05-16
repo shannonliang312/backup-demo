@@ -37,7 +37,7 @@
 
 <script>
   export default {
-    name: "group-manager",
+    name: 'group-manager',
     data () {
       return {
         tableData: [],
@@ -46,11 +46,11 @@
       }
     },
     methods: {
-      showDialog() {
-        this.dialogVisible = true;
+      showDialog () {
+        this.dialogVisible = true
       },
-      hideDialog() {
-        this.dialogVisible = false;
+      hideDialog () {
+        this.dialogVisible = false
       }
     }
   }

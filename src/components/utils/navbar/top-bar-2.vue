@@ -26,24 +26,24 @@
 </template>
 
 <script>
-  import { mapActions, mapMutations, mapGetters } from 'vuex'
+  import { mapMutations } from 'vuex'
 
   export default {
-    name: "top-bar-2",
-    data() {
+    name: 'top-bar-2',
+    data () {
       return {
         isCollapsed: true
       }
     },
     methods: {
       ...mapMutations(['logoutSuccess']),
-      toggleMenu() {
-        this.isCollapsed = !this.isCollapsed;
-        this.$emit("toggle", {toggleState: this.isCollapsed});
+      toggleMenu () {
+        this.isCollapsed = !this.isCollapsed
+        this.$emit('toggle', {toggleState: this.isCollapsed})
       },
-      logOut() {
-        this.logoutSuccess();
-        this.$router.replace({ path: "/login" });
+      logOut () {
+        this.logoutSuccess()
+        this.$router.replace({ path: '/login' })
       }
     }
   }

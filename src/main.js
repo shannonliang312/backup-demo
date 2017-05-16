@@ -11,29 +11,29 @@ import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.min.css'
 
 import ElementUI from 'element-ui'
-import NProgress from 'nprogress';
+import NProgress from 'nprogress'
 
 Vue.config.productionTip = false
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 
 router.beforeEach((to, from, next) => {
-  if(to.fullPath === "/login") {
-    next();
+  if (to.fullPath === '/login') {
+    next()
   } else {
-    NProgress.start();
-    if(!store.getters.getLoginState) {
-      next({ path: "/login" });
+    NProgress.start()
+    if (!store.getters.getLoginState) {
+      next({ path: '/login' })
     } else {
       // setTimeout(() => {next();}, 1000);
-      next();
+      next()
     }
-  }  
+  }
 })
 
 router.afterEach(() => {
-  NProgress.done();
-});
+  NProgress.done()
+})
 
 /* eslint-disable no-new */
 new Vue({

@@ -52,78 +52,78 @@
 
 <script>
   export default {
-    name: "recovery-manager",
+    name: 'recovery-manager',
     data () {
       return {
         taskForm: {
-          target: "self",
-          targetIP: ""
+          target: 'self',
+          targetIP: ''
         },
         tableData: [{
-          time: "2017-05-03 22:45:47",
-          task: "全备份一",
-          backupType: "全备份",
-          node: "节点一"
-        },{
-          time: "2017-05-04 22:45:47",
-          task: "差分增量备份三",
-          backupType: "差分增量备份",
-          node: "节点二"
-        },{
-          time: "2017-05-03 22:00:47",
-          task: "累计增量备份一",
-          backupType: "累计增量备份",
-          node: "节点四"
-        },{
-          time: "2017-05-03 22:45:47",
-          task: "全备份二",
-          backupType: "全备份",
-          node: "节点一"
-        },{
-          time: "2017-05-04 22:45:47",
-          task: "差分增量备份二",
-          backupType: "差分增量备份",
-          node: "节点二"
-        },{
-          time: "2017-05-03 22:00:47",
-          task: "累计增量备份一",
-          backupType: "累计增量备份",
-          node: "节点五"
-        },{
-          time: "2017-05-03 22:00:47",
-          task: "累计增量备份一",
-          backupType: "累计增量备份",
-          node: "节点四"
-        },{
-          time: "2017-05-03 22:45:47",
-          task: "全备份二",
-          backupType: "全备份",
-          node: "节点一"
-        },{
-          time: "2017-05-04 22:45:47",
-          task: "差分增量备份二",
-          backupType: "差分增量备份",
-          node: "节点二"
-        },{
-          time: "2017-05-03 22:00:47",
-          task: "累计增量备份一",
-          backupType: "累计增量备份",
-          node: "节点五"
+          time: '2017-05-03 22:45:47',
+          task: '全备份一',
+          backupType: '全备份',
+          node: '节点一'
+        }, {
+          time: '2017-05-04 22:45:47',
+          task: '差分增量备份三',
+          backupType: '差分增量备份',
+          node: '节点二'
+        }, {
+          time: '2017-05-03 22:00:47',
+          task: '累计增量备份一',
+          backupType: '累计增量备份',
+          node: '节点四'
+        }, {
+          time: '2017-05-03 22:45:47',
+          task: '全备份二',
+          backupType: '全备份',
+          node: '节点一'
+        }, {
+          time: '2017-05-04 22:45:47',
+          task: '差分增量备份二',
+          backupType: '差分增量备份',
+          node: '节点二'
+        }, {
+          time: '2017-05-03 22:00:47',
+          task: '累计增量备份一',
+          backupType: '累计增量备份',
+          node: '节点五'
+        }, {
+          time: '2017-05-03 22:00:47',
+          task: '累计增量备份一',
+          backupType: '累计增量备份',
+          node: '节点四'
+        }, {
+          time: '2017-05-03 22:45:47',
+          task: '全备份二',
+          backupType: '全备份',
+          node: '节点一'
+        }, {
+          time: '2017-05-04 22:45:47',
+          task: '差分增量备份二',
+          backupType: '差分增量备份',
+          node: '节点二'
+        }, {
+          time: '2017-05-03 22:00:47',
+          task: '累计增量备份一',
+          backupType: '累计增量备份',
+          node: '节点五'
         }],
         dialogVisible: false,
         newPolicyForm: {},
-        nodeList: ["全部", "节点一", "节点二", "节点三"],
-        backupTypeList: ["全备份", "差分增量备份", "累计增量备份"],
-        currentNode: "全部",
-        currentBackupType: "全备份",
+        nodeList: ['全部', '节点一', '节点二', '节点三'],
+        backupTypeList: ['全备份', '差分增量备份', '累计增量备份'],
+        currentNode: '全部',
+        currentBackupType: '全备份'
       }
     },
     methods: {
-      showDialog() {
-        this.dialogVisible = true;
+      showDialog () {
+        this.dialogVisible = true
       },
-      hideDialog() {
-        this.dialogVisible = false;
+      hideDialog () {
+        this.dialogVisible = false
       }
     }
   }
