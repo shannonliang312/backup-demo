@@ -1,28 +1,5 @@
 <template>
   <div id="app">
-    <!--<transition 
-        appear
-        name="custom-classes-transition"
-        enter-active-class="animated fadeIn"      
-      >
-      <top-bar-2 @toggle="getToggleState"></top-bar-2>
-    </transition>
-    <transition 
-        appear
-        name="custom-classes-transition"
-        enter-active-class="animated fadeIn"      
-      >
-      <side-bar :isCollapsed="collapseState"></side-bar>
-    </transition>
-    <div :style="containerClass">
-      <transition 
-        appear
-        name="custom-classes-transition"
-        enter-active-class="animated fadeIn"      
-      >
-      <router-view></router-view>
-    </transition>
-    </div>-->
     <router-view></router-view>
   </div>
 </template>
